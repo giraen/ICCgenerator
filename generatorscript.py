@@ -1,7 +1,7 @@
 import random
 
 
-def icc_generator(chars, icclength):
+def icc_generator(chars, icclength, replong):
     # Unpacks the valid letters and numbers for icc
     charlst = set(chars)
     # We can also use this below but we will use set to avoid duplicates
@@ -11,7 +11,7 @@ def icc_generator(chars, icclength):
     icc = []
 
     # Repeats the iteration for 4 times (0, 1, 2, 3)
-    for y in range(4):
+    for y in range(replong):
         # Combines the chars and numbers that is only valid
         # The length k varies
         str = "".join(random.choices(list(charlst), k=icclength))
